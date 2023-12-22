@@ -44,7 +44,6 @@ Users should be able to:
 - CSS custom properties
 - Javascript
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - Tailwind CSS
 
