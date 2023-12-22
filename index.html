@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main
+      class="min-h-screen flex md:items-center justify-center md:bg-darkSlateGray"
+    >
+      <!-- Modal -->
+      <div
+        id="modal"
+        class="inset-0 z-50 fixed bg-darkSlateGray flex md:justify-center md:items-center hide"
+      >
+        <div
+          class="bg-white h-full flex flex-col items-start justify-center gap-y-7 p-7 md:h-auto md:max-w-md md:rounded-2xl md:p-12"
+        >
+          <img src="./assets/images/icon-success.svg" alt="" class="mt-auto" />
+
+          <h1 class="text-5xl font-bold">Thanks for subscribing!</h1>
+
+          <p>
+            A confirmation email has been sent to
+            <span class="font-bold" id="user-email"></span>. Please open it and
+            click button inside to confirm your subscription.
+          </p>
+
+          <button
+            id="dismiss-btn"
+            class="bg-black py-5 text-white rounded-xl self-stretch mt-auto hover:bg-gradient-to-r from-[#EE4073] to-tomato"
+          >
+            Dismiss message
+          </button>
+        </div>
+      </div>
+      <!-- Card -->
+      <div
+        class="flex flex-col bg-white z-0 rounded-3xl max-w-4xl md:flex-row md:justify-center md:m-10"
+      >
+        <!-- Image -->
+        <div class="md:order-2 md:w-1/2 md:rounded-3xl">
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            class="w-full h-full object-cover md:p-5 md:pl-0"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="px-5 md:order-1 md:w-1/2 md:px-14 md:py-10 md:text-[14px]">
+          <!-- Heading -->
+          <h1 class="font-bold text-[40px] mt-9 md:text-5xl">Stay updated!</h1>
+          <p class="py-5">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <!-- List Section -->
+          <div class="flex flex-col gap-y-3">
+            <!-- 1 -->
+            <div class="flex gap-x-4">
+              <img
+                src="assets/images/icon-list.svg"
+                alt=""
+                class="self-start"
+              />
+              <p>Product discovery and building what matters</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="flex gap-x-4">
+              <img
+                src="assets/images/icon-list.svg"
+                alt=""
+                class="self-start"
+              />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="flex gap-x-4">
+              <img
+                src="assets/images/icon-list.svg"
+                alt=""
+                class="self-start"
+              />
+              <p>And much more!</p>
+            </div>
+          </div>
+
+          <!-- Email Input Section -->
+          <form id="form" class="my-8">
+            <div class="flex justify-between text-sm font-bold py-2">
+              <h3>Email address</h3>
+              <h3 id="error-text" class="text-tomato hide">
+                Valid Email Required
+              </h3>
+            </div>
+
+            <input
+              id="email"
+              placeholder="email@company.com"
+              class="p-4 border-2 border-gray-300 rounded-lg w-full focus:outline-black"
+            />
+            <button
+              type="submit"
+              class="text-white mt-7 w-full py-4 rounded-lg hover:bg-gradient-to-r from-[#EE4073] to-tomato"
+              style="background-color: black"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Thornen San</a>.
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
